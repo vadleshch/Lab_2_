@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lab_2_
 {
@@ -19,8 +15,13 @@ namespace Lab_2_
         }
         public static int Main(string[] args)
         {
-            string str = args[0];
-            Console.WriteLine(reve(str));
+            if (args.Length == 0)
+            {
+                Console.Error.WriteLine("no arguments");
+                return 1;
+            }
+            string input = args[0];
+            Console.WriteLine(reve(input));
             return 0;
         }
     }
